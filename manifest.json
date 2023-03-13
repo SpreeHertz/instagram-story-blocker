@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Instagram Blocker Extension",
+    "version": "1.0",
+    "description": "Blocks access to Instagram",
+    "permissions": [
+      "webRequest",
+      "webRequestBlocking",
+      "<all_urls>"
+    ],
+    "content_scripts": [{
+      "matches": ["*://www.instagram.com/*"],
+      "js": ["content.js"],
+      "css": ["background.css"]
+    }]
+  }
